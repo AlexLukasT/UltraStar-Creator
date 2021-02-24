@@ -120,7 +120,7 @@ unix:!macx {
 	CONFIG += link_pkgconfig
 	PKGCONFIG += taglib
 
-	QMAKE_LFLAGS += '-Wl,-rpath,\'\$$ORIGIN/lib\''
+	QMAKE_LFLAGS += '-Wl,-rpath,\'\$$ORIGIN/lib\',-fuse-ld=gold'
 }
 
 QMAKE_EXTRA_TARGETS += revtarget
